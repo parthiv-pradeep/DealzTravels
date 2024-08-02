@@ -1,0 +1,433 @@
+*{  
+    font-family: "Poppins", sans-serif;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+} 
+.logo{
+    margin: 30px auto;
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+}
+.logoh1{
+    text-align: center;
+}
+
+.nav{
+    position: fixed;
+    text-align: center;
+    display: flex;
+    width: 100vw;
+    margin: 2px auto;
+    justify-content: space-between;
+    box-shadow:  0px 1px 5px rgb(235, 225, 225);
+    border-radius: 10px;
+    background: #ffffff;
+    z-index: 9999;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    
+
+}
+.navlinks{
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    margin: 2rem;
+}
+.navlinks a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.bookbtn{
+    justify-content: center;
+    height: 40px;
+    width: 5rem;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin: 30px auto;
+}
+
+.bookbtn:hover{
+    background-color: white;
+    color: red;
+    transition: 1s;
+}
+
+
+/* home content */
+
+.main_home{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.home_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    width: 40%;
+    text-align: center;
+    align-items: center;
+}
+.home_title{
+    font-size: 32px;
+    font-family: "Roboto", sans-serif;
+     font-weight: 600;
+    font-style: normal;
+    line-height: 4rem;
+    padding: 30px;
+    align-items: center;
+}
+
+.home_title_span{
+    display: block;
+    color: red;
+    line-height:4rem;
+    font-size: 22px;
+
+}
+.home_btn{
+    background-color:#1E3954 ;
+    color: white;
+    padding:  10px 25px;
+    border-radius: 10px;
+    border: 2px solid #1E3954;
+    box-shadow:  0px 1px 5px #1E3954;
+    
+    
+}
+
+.home_image{
+    width: 720px;
+}
+.sidebar{
+    display: none;
+    flex-direction: column;
+    justify-content:center;
+    text-align: right;
+    position: fixed;
+    top: 14%;
+    right: 0;
+    height: 55vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(189, 189, 201);
+    box-shadow: 1px 1px 10px rgb(236, 22, 22);
+    border-radius:  0px 10px;
+    transition: 1s;
+    
+    
+}
+.sidebar_links{
+    text-decoration: none;
+    text-align: left;
+    list-style: none;
+    margin: 2rem;
+}
+.sidebar_links a{
+    list-style: none;
+    text-decoration: none;
+    color: #0a0a0a
+}
+.menu_bar{
+    display: none;
+}
+
+
+
+
+@media only screen and (max-width: 480px){
+    .navbar{
+        display: none;
+    }
+    .main_home{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .home_title{
+        padding: 10px;
+        font-size: 25px;
+        width: 100vw;
+    }
+    .home_image{
+        height: 100%;
+        width: 100vw;
+    }
+    .home_content{
+        margin-top: 70px;
+        height: 50vh;
+    }
+    .menu_bar{
+        display: flex;
+    }
+
+    .about_container{
+        flex-direction: column;
+    }
+    .about_image{
+        width: 100vw;
+    }
+    .about_image img{
+        width: 400px;
+        margin-right: 19px;
+        padding-right: 40px;
+    }
+    
+}
+
+
+.about_container{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: 5px 40px;
+
+}
+.about_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.about_title{
+   text-align:center;
+   margin-bottom: 30px;
+}
+.about_text{
+    text-align: justify;
+    justify-content: center;  
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+
+/* available car */
+.cars{
+    margin-top: 5%;
+}
+.cars_heading{
+    text-align: center;
+}
+.car_cards_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+    
+}
+.car_card{
+    overflow: hidden;
+   box-shadow: 1px 1px 10px lightgrey;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.car_card_img{
+ height: 250px;
+ width: 400px;
+
+}
+.car_card_name_h1{
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* service section */
+
+
+.service_section {
+    margin-bottom: 50px;
+   
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .section-heading{
+    font-size: 44px;
+    color: #14013c;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%,red 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: red;
+    margin: 1em 0;
+  }
+  h4{
+    text-align: center;
+    margin: 40px 10px;
+  }
+  .service_p_center{
+    text-align: center;
+  }
+  .column p {
+    color: #575a7b;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  
+  .icon-wrapper i {
+    background-color: red;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+  }
+  .card:hover {
+    background-position: 0 100%;
+  }
+  .card:hover .icon-wrapper i {
+    background-color: #ffffff;
+    color: red;
+  }
+  .card:hover h3 {
+    color: #ffffff;
+  }
+  .card:hover p {
+    color: #f0f0f0;
+  }
+  @media screen and (min-width: 768px) {
+    .service_section{
+      padding: 0 2em;
+    }
+    .column {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+    .section-heading{
+      font-size: 34px;
+      color: #14013c;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .service_section{
+      padding: 1em 3em;
+    }
+    .column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+  @media only screen and (max-width: 710px){
+    .section-heading{
+      font-size: 34px;
+      color: #14013c;
+    }
+    .service_section{
+      margin-top: 30px;
+    }
+  }
+  
+
+
+  /* booking_process */
+  .booking_process{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60vh;
+  }
+  .booking_head{
+    text-align: center;
+  }
+  .booking_process_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+  .process_heading{
+    font-size: 15px;
+  }
+  .process_content{
+    font-size: 12px;
+    margin: 0px ;
+    text-align: left;
+  }
+ 
+  .booking_process_card{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 1px 1px 10px lightgray;
+
+  }
+  .process_num_h1{
+    text-align: center;
+    color: white;
+  }
+  .process_num{
+    background-color: red;
+    width: 40px;
+    border-radius: 50%;
+  }
+  @media only screen and (max-width: 710px){
+    .booking_process_container{
+        display: flex;
+        flex-direction: column;
+        
+      }
+      .booking_head{
+        margin-top: 50px;
+      }
+}
