@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealz Travels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch+Pop&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <section class="home">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                   <img src="image/Dealz-logo.png" alt="" class="dealz_logo">
+                </div>
+                <ul class="navbar">
+                    <li class="navlinks"><a href="index.html">Home</a></li>
+                    <li class="navlinks"><a href="about.html">About us</a></li>
+                    <li class="navlinks"><a href="Car.html">Vehicle Models</a></li>
+                    <li class="navlinks"><a href="contact.html">Contact</a></li>
+                </ul>
+                <li onclick = showSidebar() class="menu_bar sidebar_links" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                <ul class="sidebar">
+                    <li onclick = closeSidebar() class="close_bar sidebar_links"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0a0a0a"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li class="sidebar_links"><a href="">Home</a></li>
+                    <li class="sidebar_links"><a href="">About us</a></li>
+                    <li class="sidebar_links"><a href="">Vehicle Models</a></li>
+                    <li class="sidebar_links"><a href="">Contact</a></li>
+                    
+                </ul>
+                <button class="bookbtn">
+                    Book Now
+                </button>
+            </div>
+    </section>
+    <section class="contact">
+        <div class="main-heading">
+
+           
+    
+            <h1>Contact Us</h1>
+    
+           
+         </div>
+    
+        <!-- hero section --> 
+        <div class="hero">
+            <div class="contact-info">
+                <div class="info-box">
+                    <div class="icon-box"></div>
+                    <div class="icon-container"><i class="fas fa-map-marker-alt" style="padding-left: 4px;padding-right: 4px;"></i></div>
+                    <h3>Office Address</h3>
+                    <address>Sea Port – Air Port Road,
+
+                        Irimpanam,
+                        
+                        Thripunithura,
+                        
+                        Cochin- 682309</address>
+                </div>
+                <div class="info-box">
+                    <div class="icon-box"></div>
+                    <div class="icon-container"><i id="phone-icon" class="fas fa-phone-alt"></i></div>
+                    <h3>Call Us</h3>
+                    <p>+91 98460 68636</p>
+                </div>
+                <div class="info-box">
+                    <div class="icon-box"></div>
+                    <div class="icon-container"><i class="fas fa-envelope"></i></div>
+                    <h3>Mail Us</h3>
+                    <p>Mail@dealz.com</p>
+                </div>
+            </div>
+            <div class="get-in-touch">
+                <h2>Get In Touch</h2>
+                <p>We are here to help. Whether you have a question about our Services,
+                    need support, or want to provide feedback, please reach out to us.</p>
+            </div>
+        </div>
+    
+        <!-- form section -->
+        <div class="form-section">
+            <div class="form-container">
+                <div class="form-heading">
+                    <i class="material-symbols-outlined">edit_square</i>
+                    <h2>Contact Form</h2>
+                </div>
+                <form id="submit-form" action="" >
+                    <div class="form-attribute">
+                        <label for="from_name">Name</label>
+                        <input type="text" id="from_name" name="from_name" required>
+                    </div>
+                    <div class="form-attribute">
+                        <label for="from_email">Email</label>
+                        <input type="email" id="from_email" name="from_email" required>
+                    </div>
+                    <div class="form-attribute">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-attribute" id="query-box">
+                        <label for="query">Query</label>
+                        <textarea class="query-textarea" id="query" name="query" rows="4" maxlength="200" required></textarea>
+                        <div id="char-count">0 / 200</div>
+                    </div>
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="form-img">
+                <img src="image/blackcardeanz.jfif" alt="medical form">
+                <!-- follow us -->
+                <div class="follow-us_section">
+                    <h2>Follow Us</h2>
+                    <div class="follow-us_container">
+                        <div class="follow-us_box">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="follow-us_box">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="follow-us_box">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- follow us -->
+        <div class="follow-us_section_respo">
+            <h2>Follow Us</h2>
+            <div class="follow-us_container">
+                <div class="follow-us_box">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="follow-us_box">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                <div class="follow-us_box">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="follow-us_box">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    
+        <!-- visit us section -->
+        <div class="visit-us">
+            <div class="map-heading">
+                <i class="material-symbols-outlined">map</i>
+                <h1>Visit Us</h1>
+            </div>
+            <p>Our office is strategically located in Kerala</p>
+            <div class="map">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.677920327568!2d76.3554920737639!3d9.96073227371174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b087359578fc897%3A0x512be72fe01ac6b3!2sDealz%20Car%20Rentals!5e0!3m2!1sen!2sin!4v1722698714621!5m2!1sen!2sin" 
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section class="footer">
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="image/Dealz-logo.png" alt="" class="dealz_logo">
+            <div class="adress_box">
+                <p class="adress_p">
+                    Sea Port – Air Port Road,Irimpanam, <br>
+                    Thripunithura,Cochin- 682309  <br>
+
+                    Mob: +91 9846068636
+                </p>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4 class="footer_quicklink_h4">Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="Car.html">Vehicle Models</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            
+            
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>DealZ &copy; 2024 .Designed by <a href="https://www.paaju.com">paaju.com</a></p>
+        </div>
+      </footer>
+      </section>
+    
+      
+   
+
+    <script src="main.js"></script>
+</body>
+</html>

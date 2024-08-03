@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .car {
+            width: 100px;
+            animation: drive 5s ease-in-out infinite;
+        }
+
+        @keyframes drive {
+            0% {
+                transform: scale(0) translateX(1000px);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1) translateX(10px);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="image/ranger_rover.png" alt="Range Rover" class="car">
+</body>
+</html>
