@@ -12,7 +12,7 @@
 /* main heading */
 .main-heading {
     margin-top: 100px;
-    background-color: red;
+    background-color: #f26422;
     color: white;
     display: flex;
     align-items: center;
@@ -103,12 +103,12 @@
 }
 
 .contact-info .info-box {
-    background-color: red;
+    background-color: #f26422;
     color: white;
     padding: 30px;
     text-align: center;
     font-size: 1.2em;
-    border-radius: 8px;
+    border-radius: 40px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -130,7 +130,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.5em;
-    color: red;
+    color:#f26422;
     position: absolute;
     background-color: white;
     border-radius: 6px;
@@ -413,7 +413,7 @@ input:focus, textarea:focus {
 .visit-us {
     display: flex;
     flex-direction: column;
-    background-color: red;
+    background-color:#f26422;
     color: white;
     transition: transform 3s;
 }
