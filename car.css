@@ -3,14 +3,14 @@
 }
 .car_heading{
     color: red;
-    font-size: 40px;
+    font-size: 28px;
     text-align: center;
     font-weight: 500;
 }
 .car_subheading{
 margin: 30px auto;
 color: black;
-font-size: 30px;
+font-size: 23px;
 text-align: center;
 font-weight: 400;
 }
@@ -18,6 +18,6 @@ font-weight: 400;
  width: 80%;
  text-align: center;
  font-weight: 400;
- font-size: 18px;
+ font-size: 13px;
  margin: 10px auto;
 }

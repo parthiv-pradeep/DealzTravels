@@ -130,20 +130,20 @@ html,body
     width: 720px;
 }
 .sidebar{
-    display: none;
-    flex-direction: column;
-    justify-content:center;
-    text-align: right;
-    position: fixed;
-    top: 14%;
-    right: 0;
-    height: 55vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgb(189, 189, 201);
-    box-shadow: 1px 1px 10px rgb(236, 22, 22);
-    border-radius:  0px 10px;
-    transition: 1s;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  position: fixed;
+  top: -9%;
+  right: 0;
+  height: 81vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgb(189, 189, 201);
+  box-shadow: 1px 1px 10px rgb(236, 22, 22);
+  /* border-radius: 550px 184px; */
+  transition: 1s;
     
     
 }

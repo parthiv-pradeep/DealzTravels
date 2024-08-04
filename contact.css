@@ -104,7 +104,8 @@
 
 .contact-info .info-box {
     background-color: #f26422;
-    color: white;
+    background-color: #cdbdb6;
+    color: black;
     padding: 30px;
     text-align: center;
     font-size: 1.2em;
@@ -116,13 +117,14 @@
     align-items: center;
     margin: 30px 10px;
     transition: transform 0.3s ease-in 0ms;
-    box-shadow: 1px 1px 3px rgba(0 , 0, 0, 0.5);
+    box-shadow: 0px 0px 5px #ece5e5;
     max-height: fit-content;
     min-height: 181px;
 }
 
+
 .contact-info .info-box h3{
-    color: white;
+    color: black;
 }
 
 .contact-info .info-box .icon-container {
