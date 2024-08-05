@@ -592,7 +592,7 @@ html,body
 }
 
 .testimonial_heading {
-  font-size: 2em;
+  font-size: 1em;
   margin-bottom: 40px;
   color: #333;
 }
@@ -616,14 +616,12 @@ html,body
 
 .testimonial_feedback {
   margin-bottom: 15px;
-  
 }
 
 .testimonial_feedback_text {
   font-size: 15px;
   color: #555;
   margin-bottom: 15px;
-  line-height: 1.5;
   text-align: left;
 }
 
@@ -635,7 +633,18 @@ html,body
 /* Add media queries for responsiveness */
 @media (max-width: 420px) {
   .testimonial_card {
+
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+ 
+
+
+}
+/* Add media queries for responsiveness */
+/* @media (max-width: 420px) {
+  .testimonial_card {
       flex: 0 0 90%;
       max-width: 90%;
   }
-}
+} */
