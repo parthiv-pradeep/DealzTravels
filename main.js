@@ -7,82 +7,58 @@ function closeSidebar(){
     sidebar.style.display = 'none'
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const cardContainer = document.querySelector('.testimonial_card_container');
-    const cards = document.querySelectorAll('.testimonial_card');
-    let currentIndex = 0;
-    let isDragging = false;
-    let startPosition = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let animationID;
 
-    cards.forEach((card, index) => {
-        const cardImage = card.querySelector('img');
-        card.addEventListener('touchstart', touchStart(index));
-        card.addEventListener('touchend', touchEnd);
-        card.addEventListener('touchmove', touchMove);
-        card.addEventListener('mousedown', touchStart(index));
-        card.addEventListener('mouseup', touchEnd);
-        card.addEventListener('mousemove', touchMove);
-        card.addEventListener('mouseleave', touchEnd);
-    });
 
-    function touchStart(index) {
-        return function(event) {
-            currentIndex = index;
-            startPosition = getPositionX(event);
-            isDragging = true;
-            animationID = requestAnimationFrame(animation);
-        };
+
+const testimonialCards = document.getElementById('testimonialCards');
+const totalCards = testimonialCards.children.length;
+let currentIndex = 0;
+
+function showNextTestimonial() {
+    currentIndex = (currentIndex + 1) % totalCards;
+    testimonialCards.style.transform = `translateX(${-currentIndex * 400}px)`;
+}
+
+function showPreviousTestimonial() {
+    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+    testimonialCards.style.transform = `translateX(${-currentIndex * 400}px)`;
+}
+
+function autoSlideTestimonials() {
+    showNextTestimonial();
+    setTimeout(autoSlideTestimonials, 3000); // Change slide every 3 seconds
+}
+
+testimonialCards.addEventListener('touchstart', handleTouchStart, false);
+testimonialCards.addEventListener('touchmove', handleTouchMove, false);
+
+let x1 = null;
+
+function handleTouchStart(event) {
+    const firstTouch = event.touches[0];
+    x1 = firstTouch.clientX;
+}
+
+function handleTouchMove(event) {
+    if (!x1) {
+        return false;
     }
 
-    function touchEnd() {
-        isDragging = false;
-        cancelAnimationFrame(animationID);
-        const movedBy = currentTranslate - prevTranslate;
+    let x2 = event.touches[0].clientX;
+    let xDiff = x2 - x1;
 
-        if (movedBy < -100 && currentIndex < cards.length - 1) {
-            currentIndex++;
-        }
-
-        if (movedBy > 100 && currentIndex > 0) {
-            currentIndex--;
-        }
-
-        setPositionByIndex();
+    if (xDiff > 0) {
+        showPreviousTestimonial();
+    } else {
+        showNextTestimonial();
     }
 
-    function touchMove(event) {
-        if (isDragging) {
-            const currentPosition = getPositionX(event);
-            currentTranslate = prevTranslate + currentPosition - startPosition;
-        }
-    }
+    x1 = null;
+}
 
-    function getPositionX(event) {
-        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-    }
+// Start the automatic sliding
+autoSlideTestimonials();
 
-    function animation() {
-        setSliderPosition();
-        if (isDragging) requestAnimationFrame(animation);
-    }
 
-    function setSliderPosition() {
-        cardContainer.style.transform = `translateX(${currentTranslate}px)`;
-    }
 
-    function setPositionByIndex() {
-        currentTranslate = currentIndex * -cards[0].offsetWidth;
-        prevTranslate = currentTranslate;
-        setSliderPosition();
-    }
 
-    function slideCards() {
-        currentIndex = (currentIndex + 1) % cards.length;
-        setPositionByIndex();
-    }
-
-    setInterval(slideCards, 3000); // change slide every 3 seconds
-});

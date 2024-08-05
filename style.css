@@ -578,6 +578,8 @@ html,body
 }
 
 /* testimonial */
+
+
 .testimonial {
   background-color: #f9f9f9;
   padding: 50px 0;
@@ -633,18 +635,8 @@ html,body
 /* Add media queries for responsiveness */
 @media (max-width: 420px) {
   .testimonial_card {
-
       flex: 0 0 100%;
       max-width: 100%;
   }
- 
-
-
 }
-/* Add media queries for responsiveness */
-/* @media (max-width: 420px) {
-  .testimonial_card {
-      flex: 0 0 90%;
-      max-width: 90%;
-  }
-} */
+
