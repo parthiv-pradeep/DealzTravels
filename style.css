@@ -8,7 +8,7 @@
 }
 
 input{
-  caret-color: normal;
+  caret-color: black;
 }
 
 html,body
@@ -19,6 +19,7 @@ html,body
     padding: 0px;
     overflow-x: hidden; 
 } 
+
 .logo{
     margin: 30px auto;
     display: flex;
@@ -42,7 +43,7 @@ html,body
     border-radius: 10px;
     background: #ffffff;
     z-index: 9999;
-
+    top: 0;
 }
 .home_content{
     opacity: 0;
@@ -193,7 +194,7 @@ html,body
 }
 
 .home_image{
-    animation: moving_car 3s linear 0ms 1 normal forwards;
+    animation: moving_car 6s ease-in-out 0ms 1 normal forwards;
     width: 720px;
 }
 .sidebar{
@@ -233,8 +234,7 @@ html,body
         transform: translateX(-100vw);
     }
     50%{
-        transform: translateX(100px);
-
+      transform: translateX(100px);
     }
     to{
         transform: translateX(0);
