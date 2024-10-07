@@ -1,0 +1,123 @@
+.about-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.about-hero h1{
+    display: flex;
+    font-size: 45px;
+    background-color: #F26422;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero p{
+    background-color: #E5D7D7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
+    color: #333;
+    border-radius: 15px;
+    font-weight: 500;
+    height: fit-content;
+    line-height: 30px;
+    box-shadow: inset 3px 3px 8px rgba(255, 166, 0, 0.37);
+    animation: init-fit 0.4s ease-in-out 0ms 1 normal both;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+}
+
+.about-hero img{
+    min-height: 100px;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.hero-text{
+    animation-timeline: scroll();
+}
+
+.hero-top, .hero-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes init-fit {
+    from{
+        transform: translateY(200px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+.our-values{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.our-values h1{
+    font-size: 40px;
+    color: #2c3e50;
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+
+  @media  screen and (min-width:950px) {
+    .values-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .value-card {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #F5f5f5;
+    min-height: 320px;
+    width: 300px;
+    margin: 40px;
+    font-weight: 500;
+    animation: init-fit 0.4s ease-in-out 0ms 1 normal both;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+  }
+
+  .value-card h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .value-card p {
+    color: #7f8c8d;
+    font-size: 1em;
+    line-height: 1.5;
+    background-color: #f88877;
+    color: white;
+    min-height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  
