@@ -87,7 +87,7 @@ html,body
     background-color: white;
     color: #F26422;
     transition: 0.15s;
-    border:2px solid #333;
+    border:2px solid #F26422;
 }
 
 /* mobile nav */
@@ -121,6 +121,14 @@ html,body
   display: none;
   font-size: x-small;
   font-weight: 600;
+}
+
+.bookbtn a{
+  color: white;
+}
+
+.bookbtn:hover a{
+  color: #F26422;
 }
 
 .blob{
@@ -183,6 +191,7 @@ html,body
     line-height: 4rem;
     padding: 30px;
     align-items: center;
+    color: #575a7b;
 }
 
 .home_title_span{
@@ -191,6 +200,21 @@ html,body
     line-height:4rem;
     font-size: 60px;
 }
+
+@media only screen and (max-width:800px){
+  .main_home{
+    line-height: 10px;
+    margin-top: 40px;
+  }
+
+  .home_title_span{
+    font-size: 40px;
+  }
+  .main_home img{
+    display: block;
+  }
+}
+
 .home_btn{
     background-color:#1E3954;
     font-weight: 600;
@@ -205,6 +229,7 @@ html,body
     animation: moving_car 6s ease-in-out 0ms 1 normal forwards;
     width: 720px;
 }
+
 .sidebar{
   display: none;
   flex-direction: column;
@@ -350,55 +375,88 @@ html,body
 
 
 /* available car */
-.cars{
-    margin-top: 5%;
-}
-.cars_heading{
-    text-align: center;
-    font-size: 26px;
-    margin-top: 47px;
+/* Cars Section */
+.cars {
+  margin-top: 5%;
+  padding: 0 20px; /* Padding for responsiveness */
 }
 
-.car_cards_container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
-    gap: 30px;
-    padding: 30px;
-    justify-content: center;
-    
+.cars h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #333;
 }
-.car_card{
-    overflow: hidden;
-   box-shadow: 1px 1px 10px lightgrey;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.car_card_img{
- 
-         height: 200px;
-        width: 285px;
-    }
 
-
-.car_card_name_h1{
-    text-align: center;
-    padding: 10px;
+/* Grid Container */
+.cars .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  justify-content: center; /* Center the container */
+  max-width: 1200px; /* Limit width to prevent stretching */
+  margin: 0 auto; /* Center the container horizontally */
 }
-@media only screen and (max-width: 710px){
-    .car_cards_container{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
-        gap: 30px;
-        padding: 30px;
-        justify-content: center;
-        
-    }
-    .car_card_img {
-        height: 200px;
-        width: 285px;
-    }
-    }
+
+/* Car Cards */
+.cars .car-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to center */
+  justify-content: space-between; /* Ensure even distribution of content */
+  text-align: center;
+  padding: 20px;
+  height: 100%; /* Make cards uniform height */
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Cards */
+.cars .car-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Car Images */
+.cars .car-card img {
+  width: 100%;
+  height: 200px; /* Fix height to ensure uniformity */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-bottom: 1px solid #eee;
+}
+
+/* Car Name */
+.cars .car-card h1 {
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .cars .container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+  }
+
+  .cars h1 {
+      font-size: 26px; /* Adjust heading size */
+  }
+
+  .cars .car-card {
+      padding: 15px; /* Reduce padding */
+  }
+
+  .cars .car-card h1 {
+      font-size: 18px; /* Adjust card title size */
+  }
+}
+
   
   
 
@@ -459,6 +517,7 @@ html,body
     font-size: 14px;
     line-height: 1.6;
     text-align: left;
+    font-weight: 500;
   }
   
   
@@ -519,6 +578,15 @@ html,body
       margin-top: 30px;
     }
   }
+
+  .about_container h1, .service_section h1{
+    font-size: 32px;
+    color: #333;
+  }
+
+  .section_subheading{
+    color: #333;
+  }
   
 
 
@@ -532,6 +600,8 @@ html,body
   }
   .booking_head{
     text-align: center;
+    font-size: 32px;
+    color: #333;
   }
   .booking_process_container{
     display: flex;
@@ -546,6 +616,8 @@ html,body
     font-size: 12px;
     margin: 0px ;
     text-align: left;
+    font-weight: 600;
+    color: #333;
   }
  
   .booking_process_card{
@@ -578,6 +650,7 @@ html,body
         margin-top: 50px;
       }
 }
+
 
 /* footer design */
 .footer {

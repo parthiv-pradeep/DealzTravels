@@ -2,14 +2,14 @@
     margin-top: 120px;
 }
 .car_heading{
-    color: red;
+    color: #F26422;
     font-size: 28px;
     text-align: center;
     font-weight: 500;
 }
 .car_subheading{
 margin: 30px auto;
-color: black;
+color: #333;
 font-size: 23px;
 text-align: center;
 font-weight: 400;
@@ -18,6 +18,20 @@ font-weight: 400;
  width: 80%;
  text-align: center;
  font-weight: 400;
- font-size: 13px;
+ font-size: 20px;
  margin: 10px auto;
+ color: #333;
 }
+
+.cars .container{
+    padding: 40px;
+
+}
+
+.cars .container .car-card p{
+    text-align: justify;
+    padding: 20px;
+    min-height: 250px;
+    color: #333;
+}
+

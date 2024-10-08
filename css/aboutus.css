@@ -35,9 +35,26 @@
 }
 
 .about-hero img{
+    display: block;
     min-height: 100px;
     max-width: 800px;
     margin: 20px;
+}
+
+@media only screen and (max-width:768px){
+    .hero-top, .hero-bottom{
+        flex-direction: column;
+    }
+    .about-hero img{
+        width: 100%;
+    }
+    .about-hero p{
+        margin: 10px 30px;
+        animation-range: 250px 350px;
+    }
+    .value-card{
+        margin: 0;
+    }
 }
 
 .hero-text{
@@ -77,6 +94,7 @@
     justify-content: center;
     gap: 10px;
     align-items: center;
+    margin-bottom: 20px;
   }
 
   @media  screen and (min-width:950px) {
@@ -93,7 +111,7 @@
     background-color: #F5f5f5;
     min-height: 320px;
     width: 300px;
-    margin: 40px;
+    margin: 20px;
     font-weight: 500;
     animation: init-fit 0.4s ease-in-out 0ms 1 normal both;
     animation-timeline: view();

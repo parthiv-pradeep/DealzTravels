@@ -48,6 +48,14 @@ input, textarea{
     /* animation: moving_car 5s linear 0ms 1 normal forwards; */
 }
 
+.bookbtn a{
+  color: white;
+}
+
+.bookbtn:hover a{
+  color: #F26422;
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -84,7 +92,7 @@ input, textarea{
     background-color: white;
     color: #F26422;
     transition: 0.15s;
-    border:2px solid #333;
+    border:2px solid #F26422;
 }
 
 /* mobile nav */
